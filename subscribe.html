@@ -17,28 +17,52 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         display: flex; /* Tambahan */
         flex-direction: column; /* Tambahan */
+        overflow-y: auto;
+        overflow-x: hidden; 
     }
 
     .navbar {
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        background: linear-gradient(to right, #1a1a1a, #2c3e50) !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: linear-gradient(to right, #1a1a1a, #2c3e50) !important;
+      height: 100px;
     }
 
     .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #fff !important;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .nav-link {
-        font-weight: 500;
-        transition: color 0.3s ease;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     .nav-link:hover {
-        color: #ffffff !important;
+      color: #ffffff !important;
+    }
+    
+    .navbar .form-control {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .navbar .form-control::placeholder {
+      color: #ffffff;
+    }
+
+    .navbar .btn-outline-dark {
+      color: white;
+      border-color: #000000;
+    }
+
+    .navbar .btn-outline-dark:hover {
+      background-color: #333;
+      color: white;
     }
 
     .container-sm {
@@ -179,8 +203,16 @@
               </li>
             </ul>
           </div>
+          <form class="d-flex">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-search"></i></span>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <button class="btn btn-outline-dark ms-2" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
+    </nav>
+
     <div class="form-wrapper">
       <div class="container-sm">
         <div class="mb-3">
